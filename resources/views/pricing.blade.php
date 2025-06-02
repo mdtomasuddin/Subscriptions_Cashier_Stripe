@@ -25,8 +25,7 @@
                 </span>
                 <p class="mt-2 text-sm text-gray-500">No commitments. Cancel anytime.</p>
 
-                {{-- <a href="{{ route('checkout', ['plan' => 'premium_monthly']) }}" --}}
-                <a href="#"
+                <a href="{{ route('checkout', ['plan' => 'price_1RVXNcPYzjQ4evEeHTsVP3se']) }}"
                     class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-indigo-100 text-indigo-800 hover:bg-indigo-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-indigo-900 dark:text-indigo-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     Sign up
                 </a>
@@ -46,14 +45,14 @@
                 </span>
                 <p class="mt-2 text-sm text-gray-500">Save 30% with full access for 1 year.</p>
 
-                <a href="#"
+                <a href="{{ route('checkout', ['plan' => 'price_1RVXMgPYzjQ4evEef6YU4NVs']) }}"
                     class="mt-5 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                     Sign up
                 </a>
             </div>
             <!-- End Card -->
 
-            <!-- Card -->
+            {{-- <!-- Card -->
             <div class="flex flex-col border border-gray-200 text-center rounded-xl p-8 dark:border-gray-700">
                 <h4 class="font-medium text-lg text-gray-800 dark:text-gray-200">Lifetime</h4>
                 <span class="mt-5 font-bold text-5xl text-gray-800 dark:text-gray-200">
@@ -67,7 +66,7 @@
                     Sign up
                 </a>
             </div>
-            <!-- End Card -->
+            <!-- End Card --> --}}
         </div>
         <!-- End Grid -->
     </div>
