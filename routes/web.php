@@ -13,6 +13,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 Route::get('/pricing', function () {
     return view('pricing');
 })->middleware(['auth', 'verified'])->name('pricing');
