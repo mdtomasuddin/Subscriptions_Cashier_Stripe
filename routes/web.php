@@ -22,9 +22,6 @@ Route::get('/success', function () {
     return view('success');
 })->middleware(['auth', 'verified'])->name('success');
 
-Route::get('/tomas', function () {
-    return 'Hello Tomas!';
-});
 
 
 //-----------------
