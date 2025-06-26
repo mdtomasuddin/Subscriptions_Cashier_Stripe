@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subscription_plan', function (Blueprint $table) {
+        Schema::create('subscription_plans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('stripe_price_id')->unique();  
+            $table->string('stripe_price_id')->unique();
             $table->integer('trial_days')->nullable();
-            $table->decimal('amount', 10, 2)->nullable(); 
+            $table->decimal('amount', 10, 2)->nullable();
             $table->integer('type')->comment('0->Monthly, 1->Yearly , 2 -> Lifetime');
             $table->integer('enabled')->comment('0->disabled , 1->enabled');
             $table->timestamps();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('subscription_plan');
+        Schema::dropIfExists('subscription_plans');
     }
 };

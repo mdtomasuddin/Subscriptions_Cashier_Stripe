@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subscription_detail', function (Blueprint $table) {
-            $table->id();
+        Schema::create('subscription_details', function (Blueprint $table) {
+           $table->id();
             $table->integer('user_id');
             $table->string('stripe_subscriptin_id')->nullable();
             $table->string('stripe_subscriptin_schedule_id')->nullable();
@@ -39,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('subscription_detail');
+        Schema::dropIfExists('subscription_details');
     }
 };
