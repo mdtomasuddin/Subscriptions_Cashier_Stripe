@@ -4,10 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class UserAuthenticaMiddleware
+class IsAuthenticate
 {
     /**
      * Handle an incoming request.
@@ -16,12 +15,6 @@ class UserAuthenticaMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->is_subscribed == 0) {
-            return redirect('/subscription');
-        } else if (Auth::check()) {
-            return $next($request);
-        }
-
-        return redirect()->route('login')->with('error', 'You must be logged in to access this page.');
+        return $next($request);
     }
 }

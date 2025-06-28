@@ -1,6 +1,7 @@
-<?php
+dashboard<?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,5 +19,8 @@ Route::post('/login', [AuthController::class, 'userlogin'])->name('userLogin');
 
 Route::group(['middleware' => ['user.Auth']], function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::group(['middleware' => ['IsAuthenticate']], function () {
+    Route::get('/subscription', [SubscriptionController::class, 'loadSubscription'])->name('subscription');
 });
