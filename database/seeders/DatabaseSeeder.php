@@ -2,25 +2,25 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\ContentSeeder;
+use Database\Seeders\DynamicPageSeeder;
+use Database\Seeders\FAQSeeder;
+use Database\Seeders\ServiceSeeder;
+use Database\Seeders\SocialMediaSeeder;
+use Database\Seeders\SystemSettingSeeder;
+use Database\Seeders\UserSeeder;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
+class DatabaseSeeder extends Seeder {
+    public function run(): void {
         $this->call([
-            SubscriptionPlanSeeder::class,
-
+            UserSeeder::class,
+            SystemSettingSeeder::class,
+            FAQSeeder::class,
+            DynamicPageSeeder::class,
+            SocialMediaSeeder::class,
+            ContentSeeder::class,
+            ServiceSeeder::class,
         ]);
     }
 }
